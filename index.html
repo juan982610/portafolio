@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV — Juan de Dios Posada Patiño</title>
+  <meta name="description" content="Hoja de vida de Juan de Dios Posada Patiño — Desarrollador de software" />
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="cv">
+    <!-- ===== Encabezado ===== -->
+    <header class="header-cv" aria-labelledby="cv-name">
+      <figure class="header-cv__avatar" aria-hidden="true">
+        <img class="fotoperfil" src="Foto.png" alt="Foto de perfil de Juan de Dios Posada Patiño" />
+      </figure>
+
+      <div class="header-cv__identity">
+        <h1 id="cv-name" class="header-cv__name">Juan de Dios Posada Patiño</h1>
+        <p class="header-cv__role">Desarrollador de Software Front-end  </p>
+
+        <address class="header-cv__contact" aria-label="Datos de contacto">
+          <span class="header-cv__badge">Medellín, Colombia</span>
+          <span class="header-cv__badge">📞 324 586 7583</span>
+          <a class="header-cv__badge" href="mailto:juand.posada10@gmail.com">✉️ juand.posada10@gmail.com</a>
+          <a class="header-cv__badge" href="https://www.linkedin.com/in/juan-de-dios-posada-pati%C3%B1o-45190222b/" target="_blank" rel="noopener">in /juan-de-dios-posada</a>
+          <a class="header-cv__badge" href="" >GitHub</a>
+        </address>
+
+        <div class="header-cv__actions" role="group" aria-label="Acciones rápidas">
+          <button class="header-cv__btn header-cv__btn--secondary" id="themeToggle" type="button">Alternar tema</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== Contenido ===== -->
+    <main class="layout" id="contenido">
+      <!-- Columna izquierda -->
+      <section class="layout__main stack" aria-label="Perfil, experiencia y proyectos">
+        <article class="card">
+          <h2 class="card__title">Perfil profesional</h2>
+          <p class="card__meta">C#, ASP.NET Core, SQL Server, React, JavaScript, HTML5, CSS3, Tailwind.</p>
+          <p class="card__text">
+            Desarrollador con experiencia en C# y SQL Server, actualmente enfocado en el desarrollo front-end. Con 
+            enfoque en el desarrollo de interfaces modernas, eficientes y accesibles, aplicando principios de diseño 
+            responsivo y buenas prácticas para asegurar una experiencia de usuario sólida. Destaco por mi pensamiento lógico, 
+            comunicación efectiva y compromiso con la mejora continua. Me encuentro en una etapa activa de transición profesional, 
+            fortaleciendo mis habilidades en HTML, CSS, JavaScript y React, con proyectos personales que reflejan 
+            esta evolución.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2 class="card__title">Experiencia</h2>
+
+          <section class="timeline stack" aria-label="Línea de tiempo laboral">
+            <article class="timeline__item segment">
+              <h3 class="segment__title">WA Solutions SAS — Analista Nivel 2 / Desarrollador</h3>
+              <div class="segment__meta meta">
+                <span class="meta__item">Abr 2022 — Jun 2024</span>
+                <span class="meta__item">Medellín, Colombia</span> <br>
+                <span class="meta__item">.NET • SQL Server • APIs • DevOps</span>
+              </div>
+              <ul class="segment__list">
+                <li class="segment__list-item">Diseñé y desarrollé <strong>módulos web</strong> en <strong>C# y ASP.NET Core</strong> con refactorización orientada a <em>SOLID</em> y métricas de rendimiento.</li>
+                <li class="segment__list-item">Implementé e integré <strong>APIs RESTful</strong> para comunicación con <abbr title="Enterprise Resource Planning">ERP</abbr> del cliente.</li>
+                <li class="segment__list-item">Administré <strong>SQL Server</strong> (consultas optimizadas, ajustes de estructuras).</li>
+                <li class="segment__list-item">Gestioné <strong>versionado</strong> en <strong>Azure DevOps</strong></li>
+                <li class="segment__list-item">Ejecuté <strong>pruebas unitarias y de integración</strong>, y documenté procesos técnicos.</li>
+              </ul>
+            </article>
+          </section>
+        </article>
+
+        <!-- <article class="card">
+          <h2 class="card__title">Proyectos destacados</h2>
+
+          <section class="segment">
+            <h3 class="segment__title">Portal de pagos / Integración REST</h3>
+            <p class="segment__meta meta">Angular • TypeScript • .NET API • SQL Server</p>
+            <ul class="segment__list">
+              <li class="segment__list-item">Front-end en <strong>Angular</strong> con <strong>routing</strong>, <strong>servicios</strong> y <strong>formularios reactivos</strong>.</li>
+              <li class="segment__list-item">Back-end en <strong>ASP.NET Core</strong> + <strong>Entity Framework</strong> para endpoints seguros.</li>
+              <li class="segment__list-item">Validaciones, manejo de estados y diseño <strong>responsive</strong> con Bootstrap.</li>
+            </ul>
+          </section>
+
+          <section class="segment">
+            <h3 class="segment__title">Dashboard operativo</h3>
+            <p class="segment__meta meta">TypeScript • Charts • Optimización de consultas</p>
+            <ul class="segment__list">
+              <li class="segment__list-item">Componentes reutilizables y carga diferida de datos.</li>
+              <li class="segment__list-item">Consultas parametrizadas y <strong>paginación</strong> para mejorar TTFB.</li>
+            </ul>
+          </section>
+        </article> -->
+      </section>
+
+      <!-- Columna derecha -->
+      <aside class="layout__aside stack" aria-label="Habilidades, educación e idiomas">
+        <section class="card">
+          <h2 class="card__title">Habilidades</h2>
+          <div class="tags" aria-label="Tecnologías principales">
+            <span class="tags__item tags__item--ok">C#</span>
+            <span class="tags__item tags__item--ok">ASP.NET Core</span>
+            <span class="tags__item tags__item--ok">Entity Framework</span>
+            <span class="tags__item tags__item--ok">SQL Server</span>
+            <span class="tags__item tags__item--ok">APIs REST</span>
+            <span class="tags__item tags__item--ok">Angular</span>
+            <span class="tags__item tags__item--ok">TypeScript</span>
+            <span class="tags__item">JavaScript ES6+</span>
+            <span class="tags__item">HTML5</span>
+            <span class="tags__item">CSS3</span>
+            <span class="tags__item">Bootstrap</span>
+            <span class="tags__item">Tailwind</span>
+            <span class="tags__item">Azure DevOps</span>
+            <span class="tags__item">Git/GitHub</span>
+            <span class="tags__item tags__item--warn">React (base)</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="card__title">Educación</h2>
+          <table class="table-mini" role="table" aria-label="Formación">
+            <thead class="table-mini__head">
+              <tr class="table-mini__row">
+                <th scope="col" class="table-mini__cell table-mini__cell--head">Programa</th>
+                <th scope="col" class="table-mini__cell table-mini__cell--head">Institución</th>
+              </tr>
+            </thead>
+            <tbody class="table-mini__body">
+              <tr class="table-mini__row">
+                <td class="table-mini__cell">Tecnólogo en Análisis y Desarrollo de Software</td>
+                <td class="table-mini__cell">SENA</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- <section class="card">
+          <h2 class="card__title">Idiomas</h2>
+          <div class="tags">
+            <span class="tags__item">Español (nativo)</span>
+            <span class="tags__item">Inglés (técnico)</span>
+          </div>
+        </section> -->
+      </aside>
+    </main>
+
+    <!-- <footer class="footer-cv">
+      <h2 class="sr-only">Notas y enlaces</h2>
+      <p class="footer-cv__note">
+      </p>
+    </footer> -->
+  </div>
+
+  <!-- ===== JSON-LD para visibilidad en IA / buscadores ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Juan de Dios Posada Patiño",
+    "jobTitle": "Desarrollador de Software",
+    "address": { "@type": "PostalAddress", "addressLocality": "Medellín", "addressCountry": "CO" },
+    "email": "mailto:juand.posada10@gmail.com",
+    "telephone": "+57-324-586-7583",
+    "knowsAbout": [
+      "C#", "ASP.NET Core", "Entity Framework", "SQL Server",
+      "APIs REST", "Angular", "TypeScript", "JavaScript", "HTML", "CSS", "Bootstrap",
+      "Azure DevOps", "Git", "CI/CD", "SOLID", "Pruebas unitarias", "Accesibilidad web"
+    ]
+  }
+  </script>
+
+  <script src="index.js"></script>
+</body>
+</html>

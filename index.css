@@ -1,0 +1,203 @@
+/* ===========================
+   Diseño base y variables
+   =========================== */
+:root{
+  --bg: #0b1220;
+  --surface: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --brand: #268bca;
+  --brand-2:#1544aa;
+  --ok: #22c55e;
+  --warn:#f59e0b;
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --sans: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+/* Modo claro */
+:root.light{
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --shadow: 0 10px 24px rgba(2,6,23,.08);
+}
+
+/* Reset razonable */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: var(--sans);
+  color:var(--text);
+  background: radial-gradient(1200px 500px at 20% -10%, rgba(38,139,202,.25), transparent 60%),
+              radial-gradient(800px 400px at 90% -10%, rgba(21,68,170,.18), transparent 60%),
+              var(--bg);
+  line-height:1.6;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+
+
+.cv{
+  max-width: 1080px;
+  margin: 48px auto;
+  padding: 0 20px 56px;
+}
+
+
+.header-cv{
+  display:grid;
+  grid-template-columns: 120px 1fr;
+  gap: 20px;
+  align-items:center;
+  background: linear-gradient(135deg, rgba(21,68,170,.14), rgba(38,139,202,.10));
+  border: 1px solid rgba(255,255,255,.06);
+  padding: 18px;
+  border-radius: calc(var(--radius) + 6px);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+}
+.header-cv__avatar{
+  width: 120px; height:120px; border-radius: 50%;
+  overflow:hidden; border:2px solid rgba(255,255,255,.15);
+  background: linear-gradient(180deg, rgba(255,255,255,.12), transparent);
+  margin:0;
+}
+.header-cv__identity{}
+.header-cv__name{
+  margin:0 0 4px 0;
+  font-size: clamp(26px, 3vw, 34px);
+  letter-spacing:.3px;
+}
+.header-cv__role{font-weight:600;color:var(--brand);margin:0 0 6px}
+.header-cv__contact{
+  display:flex; flex-wrap:wrap; gap:8px 16px; margin-top:8px; font-size:14px; color:var(--muted);
+  font-style: normal; /* evitar cursiva de <address> */
+}
+.header-cv__badge{
+  display:inline-flex; align-items:center; gap:8px;
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.10);
+  padding:6px 10px; border-radius:999px;
+}
+.header-cv__actions{
+  display:flex; gap:10px; margin-top:10px; flex-wrap:wrap;
+}
+.header-cv__btn{
+  appearance:none; border:0; cursor:pointer;
+  font-weight:600; padding:10px 14px; border-radius:12px;
+  background: linear-gradient(180deg, var(--brand), var(--brand-2));
+  color:white; box-shadow: var(--shadow);
+}
+.header-cv__btn--secondary{
+  background:transparent; color:var(--text);
+  border:1px solid rgba(255,255,255,.18);
+}
+
+/* ====== Layout principal (block: layout) ====== */
+.layout{
+  margin-top: 26px;
+  display:grid; gap:22px;
+  grid-template-columns: 1.2fr .8fr;
+}
+
+@media (max-width: 900px){
+  .layout{grid-template-columns:1fr}
+  .header-cv{grid-template-columns: 80px 1fr}
+  .header-cv__avatar{width:80px;height:80px}
+}
+
+/* ====== Tarjeta (block: card) ====== */
+.card{
+  background: var(--card);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  padding:18px 18px 14px;
+  box-shadow: var(--shadow);
+}
+.card__title{
+  margin:0 0 10px 0; font-size: clamp(18px, 2.2vw, 22px); letter-spacing:.2px;
+}
+.card__meta{color:var(--muted); font-size: 14px; margin:0 0 6px}
+.card__text{margin:8px 0}
+
+/* ====== Pila vertical (block: stack) ====== */
+.stack{display:flex; flex-direction:column; gap:14px}
+
+/* ====== Segmento genérico (block: segment) ====== */
+.segment{
+  padding: 12px 12px 10px;
+  border-radius: 14px;
+  border:1px dashed rgba(255,255,255,.10);
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+}
+.segment__title{margin:0 0 4px 0; font-size: 16px}
+.segment__meta{font: 13px/1.4 var(--mono); color: var(--muted)}
+.segment__list{margin:8px 0 0 18px}
+.segment__list-item{margin:6px 0}
+
+/* ====== Línea de tiempo (block: timeline) ====== */
+.timeline{position:relative}
+.timeline::before{
+  content:""; position:absolute; left:10px; top:0; bottom:0;
+  width:2px; background: linear-gradient(180deg, var(--brand-2), transparent);
+  opacity:.35;
+}
+.timeline__item{
+  position:relative; margin-left:28px; padding-left:10px;
+}
+.timeline__item::before{
+  content:""; position:absolute; left:-23px; top:-2px;
+  width:10px; height:10px; border-radius:50%;
+  background: var(--brand); box-shadow: 0 0 0 4px rgba(38,139,202,.18);
+}
+
+/* ====== Tags/Habilidades (block: tags) ====== */
+.tags{display:flex; flex-wrap:wrap; gap:8px}
+.tags__item{
+  font: 13px/1 var(--mono);
+  padding:8px 10px; border-radius: 999px;
+  border:1px solid rgba(255,255,255,.14);
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+  white-space:nowrap;
+}
+.tags__item--ok{border-color:rgba(34,197,94,.45)}
+.tags__item--warn{border-color:rgba(245,158,11,.45)}
+
+/* ====== Tabla compacta (block: table-mini) ====== */
+.table-mini{width:100%; border-collapse: collapse; font-size: 14px}
+.table-mini__row{}
+.table-mini__cell{
+  padding:8px 10px; border-bottom:1px dashed rgba(255,255,255,.10); text-align:left;
+}
+.table-mini__cell--head{color:var(--muted); font-weight:600}
+
+/* ====== Metadatos genéricos (block: meta) ====== */
+.meta{font: 13px/1.4 var(--mono); color: var(--muted); display:flex; gap:10px; flex-wrap:wrap}
+.meta__item{}
+
+/* ====== Accesibilidad ====== */
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; overflow:hidden;
+  clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
+/* ====== Footer (block: footer-cv) ====== */
+.footer-cv{
+  background: var(--card);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  padding:14px 18px;
+  margin-top:22px;
+  box-shadow: var(--shadow);
+}
+.footer-cv__note{color:var(--muted); margin:0}
+
+.fotoperfil {
+    height: 120px;
+}
